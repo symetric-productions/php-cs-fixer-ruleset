@@ -1,0 +1,14 @@
+{
+    "name": "symetric/php-cs-fixer-ruleset",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "friendsofphp/php-cs-fixer": "^3.80"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symetric\\PhpCsFixerRuleset\\": "src/"
+        }
+    }
+}
