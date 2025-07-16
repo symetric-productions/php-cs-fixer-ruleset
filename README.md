@@ -1,6 +1,6 @@
 # Symetric PHP-CS-Fixer Ruleset
 
-## Get Started
+## Installation
 
 ```shell
 composer require --dev symetric/php-cs-fixer-ruleset
