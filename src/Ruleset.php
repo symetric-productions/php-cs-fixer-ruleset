@@ -9,8 +9,8 @@ class Ruleset
     public static function rules(): array
     {
         return [
-            '@PER-CS2.0' => true,
-            '@PER-CS2.0:risky' => true,
+            '@PER-CS3.0' => true,
+            '@PER-CS3.0:risky' => true,
             'align_multiline_comment' => true,
             'array_push' => true,
             'assign_null_coalescing_to_coalesce_equal' => true,
