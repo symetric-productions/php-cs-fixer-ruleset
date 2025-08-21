@@ -236,7 +236,6 @@ class Ruleset
             'regular_callable_call' => true,
             'return_assignment' => true,
             'set_type_to_cast' => true,
-            'self_accessor' => true,
             'self_static_accessor' => true,
             'semicolon_after_instruction' => true,
             'simple_to_complex_string_variable' => true,
