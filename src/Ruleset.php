@@ -4,13 +4,30 @@ declare(strict_types=1);
 
 namespace Symetric\PhpCsFixerRuleset;
 
-class Ruleset
+use PhpCsFixer\RuleSet\RuleSetDefinitionInterface;
+
+final class Ruleset implements RuleSetDefinitionInterface
 {
-    public static function rules(): array
+    public function getName(): string
+    {
+        return '@Symetric/Default';
+    }
+
+    public function getDescription(): string
+    {
+        return 'Default ruleset used by Symetric Productions';
+    }
+
+    public function isRisky(): bool
+    {
+        return true;
+    }
+
+    public function getRules(): array
     {
         return [
-            '@PER-CS3.0' => true,
-            '@PER-CS3.0:risky' => true,
+            '@PER-CS3x0' => true,
+            '@PER-CS3x0:risky' => true,
             'align_multiline_comment' => true,
             'array_push' => true,
             'assign_null_coalescing_to_coalesce_equal' => true,
@@ -270,5 +287,15 @@ class Ruleset
                 'less_and_greater' => false,
             ],
         ];
+    }
+
+    /**
+     * @deprecated Since symetric/php-cs-fixer-ruleset 1.2: Using "Ruleset::rules()" is deprecated and will be removed in 2.0. See UPGRADING.md for more info.
+     */
+    public static function rules(): array
+    {
+        @trigger_error(sprintf('Since symetric/php-cs-fixer-ruleset 1.2: Using "%s" is deprecated and will be removed in 2.0. See UPGRADING.md for more info.', __METHOD__), \E_USER_DEPRECATED);
+
+        return (new self())->getRules();
     }
 }
