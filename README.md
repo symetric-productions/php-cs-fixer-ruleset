@@ -27,7 +27,12 @@ $finder = (new Finder())
 
 return (new Config())
     ->setParallelConfig(ParallelConfigFactory::detect())
-    ->setRules(Ruleset::rules())
+    ->registerCustomRuleSets([
+        new Ruleset(),
+    ])
+    ->setRules([
+        '@Symetric/Default' => true,
+    ])
     ->setRiskyAllowed(true)
     ->setFinder($finder)
 ;
