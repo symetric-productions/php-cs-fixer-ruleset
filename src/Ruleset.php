@@ -290,11 +290,11 @@ final class Ruleset implements RuleSetDefinitionInterface
     }
 
     /**
-     * @deprecated Since symetric/php-cs-fixer-ruleset 1.2: Using "Ruleset::rules()" is deprecated and will be removed in 2.0. See UPGRADING.md for more info.
+     * @deprecated Since symetric/php-cs-fixer-ruleset 1.2: Using "Ruleset::rules()" is deprecated and will be removed in 2.0. See UPGRADE.md for more info.
      */
     public static function rules(): array
     {
-        @trigger_error(sprintf('Since symetric/php-cs-fixer-ruleset 1.2: Using "%s" is deprecated and will be removed in 2.0. See UPGRADING.md for more info.', __METHOD__), \E_USER_DEPRECATED);
+        @trigger_error(sprintf('Since symetric/php-cs-fixer-ruleset 1.2: Using "%s" is deprecated and will be removed in 2.0. See UPGRADE.md for more info.', __METHOD__), \E_USER_DEPRECATED);
 
         return (new self())->getRules();
     }
